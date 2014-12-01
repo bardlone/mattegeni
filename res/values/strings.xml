@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MatteGeni2</string>
+    <string name="first_welcome">Velkommen!</string>
+    <string name="choose_grade">Velg klassetrinn:</string>
+    <string name="choose_level">Velg nivå:</string>
+    <string name="action_settings">Settings</string>
+
+    <color name="blue">#38C0FB</color>
+
+    <string name="first_grade">1.Klasse</string>
+    <string name="second_grade">2.Klasse</string>
+    <string name="third_grade">3.Klasse</string>
+    <string name="fourth_grade">4.Klasse</string>
+    <string name="fifth_grade">5.Klasse</string>
+    <string name="sixth_grade">6.Klasse</string>
+    <string name="seventh_grade">7.Klasse</string>
+    <string name="level_one">Nivå 1</string>
+    <string name="level_two">Nivå 2</string>
+    <string name="level_three">Nivå 3</string>
+    <string name="title_activity_grade_one">GradeOne</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_choose_level">ChooseLevel</string>
+
+</resources>

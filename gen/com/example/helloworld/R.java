@@ -1092,20 +1092,24 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f090002;
         public static final int action_menu_presenter=0x7f090003;
         public static final int action_mode_close_button=0x7f090024;
-        public static final int action_settings=0x7f090048;
+        public static final int action_settings=0x7f09004f;
         public static final int activity_chooser_view_content=0x7f090025;
         public static final int always=0x7f09000f;
         public static final int beginning=0x7f090016;
-        public static final int button1=0x7f09003e;
-        public static final int button10=0x7f090046;
-        public static final int button2=0x7f09003f;
-        public static final int button3=0x7f090040;
-        public static final int button4=0x7f090041;
-        public static final int button5=0x7f090042;
-        public static final int button6=0x7f090043;
-        public static final int button7=0x7f090044;
-        public static final int button8=0x7f090045;
-        public static final int button9=0x7f090047;
+        public static final int button1=0x7f090042;
+        public static final int button10=0x7f09004a;
+        public static final int button2=0x7f090043;
+        public static final int button3=0x7f090044;
+        public static final int button4=0x7f090045;
+        public static final int button5=0x7f090046;
+        public static final int button6=0x7f090047;
+        public static final int button7=0x7f090048;
+        public static final int button8=0x7f090049;
+        public static final int button9=0x7f09004b;
+        public static final int buttonG2L1=0x7f09004c;
+        public static final int buttonG2L2=0x7f09004e;
+        public static final int buttonG2L3=0x7f09004d;
+        public static final int buttonsvar=0x7f09003f;
         public static final int checkbox=0x7f09002d;
         public static final int collapseActionView=0x7f090010;
         public static final int default_activity_button=0x7f090028;
@@ -1124,6 +1128,7 @@ containing a value of this type.
         public static final int listMode=0x7f090006;
         public static final int list_item=0x7f090029;
         public static final int middle=0x7f090018;
+        public static final int mytw=0x7f09003d;
         public static final int never=0x7f090012;
         public static final int none=0x7f090019;
         public static final int normal=0x7f090007;
@@ -1144,11 +1149,13 @@ containing a value of this type.
         public static final int showCustom=0x7f09000b;
         public static final int showHome=0x7f09000c;
         public static final int showTitle=0x7f09000d;
+        public static final int skrivsvar=0x7f09003e;
         public static final int split_action_bar=0x7f09001e;
         public static final int submit_area=0x7f090039;
         public static final int tabMode=0x7f090008;
-        public static final int textView1=0x7f09003d;
-        public static final int textView2=0x7f09003c;
+        public static final int textView1=0x7f090041;
+        public static final int textView2=0x7f090040;
+        public static final int textView5=0x7f09003c;
         public static final int title=0x7f09002b;
         public static final int top_action_bar=0x7f090020;
         public static final int up=0x7f090021;
@@ -1207,13 +1214,16 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_grade_one=0x7f030018;
         public static final int activity_main=0x7f030019;
-        public static final int choose_level=0x7f03001a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
+        public static final int choose_level_grade_one=0x7f03001a;
+        public static final int choose_level_grade_two=0x7f03001b;
+        public static final int grade_one_answers=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
-        public static final int choose_level=0x7f0c0000;
-        public static final int grade_one=0x7f0c0001;
-        public static final int main=0x7f0c0002;
+        public static final int answers_grade_one=0x7f0c0000;
+        public static final int choose_level=0x7f0c0001;
+        public static final int gradeone=0x7f0c0002;
+        public static final int main=0x7f0c0003;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1256,24 +1266,29 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
-        public static final int action_settings=0x7f0a0011;
-        public static final int app_name=0x7f0a000d;
-        public static final int choose_grade=0x7f0a000f;
-        public static final int choose_level=0x7f0a0010;
-        public static final int fifth_grade=0x7f0a0016;
-        public static final int first_grade=0x7f0a0012;
-        public static final int first_welcome=0x7f0a000e;
-        public static final int fourth_grade=0x7f0a0015;
-        public static final int hello_world=0x7f0a001d;
-        public static final int level_one=0x7f0a0019;
-        public static final int level_three=0x7f0a001b;
-        public static final int level_two=0x7f0a001a;
-        public static final int second_grade=0x7f0a0013;
-        public static final int seventh_grade=0x7f0a0018;
-        public static final int sixth_grade=0x7f0a0017;
-        public static final int third_grade=0x7f0a0014;
-        public static final int title_activity_choose_level=0x7f0a001e;
-        public static final int title_activity_grade_one=0x7f0a001c;
+        public static final int action_settings=0x7f0a0014;
+        public static final int app_name=0x7f0a0010;
+        public static final int choose_grade=0x7f0a0012;
+        public static final int choose_level=0x7f0a0013;
+        public static final int fifth_grade=0x7f0a001b;
+        public static final int first_grade=0x7f0a0017;
+        public static final int first_welcome=0x7f0a0011;
+        public static final int fourth_grade=0x7f0a001a;
+        public static final int hello_world=0x7f0a0022;
+        public static final int level_one=0x7f0a001e;
+        public static final int level_three=0x7f0a0020;
+        public static final int level_two=0x7f0a001f;
+        public static final int mytw=0x7f0a0016;
+        public static final int resultat=0x7f0a000f;
+        public static final int second_grade=0x7f0a0018;
+        public static final int seventh_grade=0x7f0a001d;
+        public static final int sixth_grade=0x7f0a001c;
+        public static final int skriv_svar=0x7f0a000d;
+        public static final int solvethis=0x7f0a0015;
+        public static final int svar=0x7f0a000e;
+        public static final int third_grade=0x7f0a0019;
+        public static final int title_activity_choose_level=0x7f0a0023;
+        public static final int title_activity_grade_one=0x7f0a0021;
     }
     public static final class style {
         /** 

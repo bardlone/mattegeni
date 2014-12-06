@@ -59,35 +59,60 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		return super.onOptionsItemSelected(item);
 	}
 
-	public void ButtonClick(int n) {
+	public void ButtonClick1(int n) {
 		
-		startActivity(new Intent("com.example.helloworld.ChooseLevel"));
+		startActivity(new Intent("com.example.helloworld.ChooseLevelGradeOne"));
 	}
+	
+public void ButtonClick2(int n) {
+		
+		startActivity(new Intent("com.example.helloworld.ChooseLevelGradeTwo"));
+	}
+public void ButtonClick3(int n) {
+	
+	startActivity(new Intent("com.example.helloworld.ChooseLevel"));
+}
+public void ButtonClick4(int n) {
+	
+	startActivity(new Intent("com.example.helloworld.ChooseLevel"));
+}
+public void ButtonClick5(int n) {
+	
+	startActivity(new Intent("com.example.helloworld.ChooseLevel"));
+}
+public void ButtonClick6(int n) {
+	
+	startActivity(new Intent("com.example.helloworld.ChooseLevel"));
+}
+public void ButtonClick7(int n) {
+	
+	startActivity(new Intent("com.example.helloworld.ChooseLevel"));
+}
 
 	@Override
 	public void onClick(View v) {
 		
 		switch (v.getId()) {
 		case R.id.button1:
-			ButtonClick(1);
+			ButtonClick1(1);
 			break;
 		case R.id.button2:
-			ButtonClick(2);
+			ButtonClick2(2);
 			break;
 		case R.id.button3:
-			ButtonClick(3);
+			ButtonClick3(3);
 			break;
 		case R.id.button4:
-			ButtonClick(4);
+			ButtonClick4(4);
 			break;
 		case R.id.button5:
-			ButtonClick(5);
+			ButtonClick5(5);
 			break;
 		case R.id.button6:
-			ButtonClick(6);
+			ButtonClick6(6);
 			break;
 		case R.id.button7:
-			ButtonClick(7);
+			ButtonClick7(7);
 			break;
 		}
 	}

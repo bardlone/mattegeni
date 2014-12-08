@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.helloworld.GradeOne" >
+    tools:context="com.example.helloworld.GradeTwo" >
 
     <TextView
         android:id="@+id/textView5"
@@ -34,11 +34,12 @@
         android:id="@+id/skrivsvar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       
+        android:inputType="phone"
         android:layout_marginTop="146dp"
         android:ems="10"        
         android:hint="@string/skriv_svar" 
         android:textStyle="italic"
+        android:imeOptions="actionSend"
         >
 
         

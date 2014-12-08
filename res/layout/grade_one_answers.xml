@@ -10,7 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin" 
-    tools:context="com.example.helloworld.CheckAnswersGradeOne" >
+    tools:context="com.example.helloworld.CheckAnswersGradeOneLevelOne">
    
     
     <TextView
@@ -18,10 +18,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="@string/resultat"
+        android:text="@string/ditt_svar"
         android:textSize="26sp" 
         android:textAppearance="?android:attr/textAppearanceLarge"/>
-        
 
-    
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="42dp"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="26sp" />
+
+      <Button
+          android:id="@+id/buttonneste"
+          android:layout_width="100dp"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/textView3"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="38dp"
+          android:background="#00FF00"
+          android:text="@string/neste" 
+          
+          />
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/textView2"
+          android:layout_below="@+id/textView2"
+          android:layout_marginTop="38dp"
+          android:gravity="center_horizontal"
+          android:text="@string/resultat"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:textSize="26sp" />
+
     </RelativeLayout>

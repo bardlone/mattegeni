@@ -4,13 +4,14 @@ package com.example.helloworld;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 	Button button1;
 	Button button2;
 	Button button3;
@@ -70,7 +71,7 @@ public void ButtonClick2(int n) {
 	}
 public void ButtonClick3(int n) {
 	
-	startActivity(new Intent("com.example.helloworld.ChooseLevel"));
+	startActivity(new Intent("com.example.helloworld.ChooseLevelGradeThree"));
 }
 public void ButtonClick4(int n) {
 	

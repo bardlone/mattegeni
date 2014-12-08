@@ -5,38 +5,34 @@ import java.util.Random;
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.TextView.OnEditorActionListener;
 
 import java.lang.System.*;
 
-public class GradeOneLevelOne extends ActionBarActivity implements View.OnClickListener {
-
+public class GradeTwoLevelOne extends ActionBarActivity implements View.OnClickListener {
 Button buttonsvar; 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_grade_one);
+		setContentView(R.layout.activity_grade_two); //using the same layout for all grades
 	    buttonsvar = (Button) findViewById(R.id.buttonsvar);
     	buttonsvar.setOnClickListener(this);
     
 		Random randomGen = new Random();
-		int maxValue = 4;
-		int minValue = 1;
-		int a = randomGen.nextInt(maxValue + minValue) + minValue;
-		int b = randomGen.nextInt(maxValue + minValue) + minValue;
+		int maxValue = 100;
+		int minValue = 10;
+		int a = randomGen.nextInt(maxValue - minValue) + minValue;
+		int b = randomGen.nextInt((maxValue -10) - a) + minValue;
 		int operator = (int)(Math.random()*2) + 1;
 		final TextView mTextView = (TextView) findViewById(R.id.mytw);
-		//mTextView.setText( +a +operator  +b +" ="); 
+		
 		
 		if (operator == 1)
 
@@ -46,13 +42,14 @@ Button buttonsvar;
 
 			mTextView.setText(+a +"-" +b +"=");
 			 
-			 else if ((operator == 2) && (a<b))
+			 if ((operator == 2) && (a<b))
 			mTextView.setText(+b +"-" +a +"=");
+	
 			 
-			
 	}
 	
 	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -74,8 +71,6 @@ Button buttonsvar;
 		return super.onOptionsItemSelected(item);
 	}
 	
-	
-
 	@Override
 	public void onClick(View view) {
 		
@@ -85,6 +80,7 @@ Button buttonsvar;
              Intent myIntent = new Intent(view.getContext(),CheckAnswersGradeOneLevelOne.class);
              myIntent.putExtra("mytext",text);
              startActivity(myIntent);
+
 	}
 	
 }

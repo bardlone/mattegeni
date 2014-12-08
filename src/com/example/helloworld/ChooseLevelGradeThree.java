@@ -8,24 +8,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
  
-public class ChooseLevelGradeOne extends Activity implements View.OnClickListener{
+public class ChooseLevelGradeThree extends Activity implements View.OnClickListener{
  
-	Button buttonG1L1;
-	Button buttonG1L2;
-	Button buttonG1L3;
+	Button buttonG3L1;
+	Button buttonG3L2;
+	Button buttonG3L3;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
     
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.choose_level_grade_one);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        buttonG1L1 = (Button) findViewById(R.id.buttonG1L1);
-    	buttonG1L1.setOnClickListener(this);
-    	buttonG1L2 = (Button) findViewById(R.id.buttonG1L2);
-    	buttonG1L2.setOnClickListener(this);
-    	buttonG1L3 = (Button) findViewById(R.id.buttonG1L3);
-    	buttonG1L3.setOnClickListener(this);
+        setContentView(R.layout.choose_level_grade_three);
+        buttonG3L1 = (Button) findViewById(R.id.buttonG3L1);
+    	buttonG3L1.setOnClickListener(this);
+    	buttonG3L2 = (Button) findViewById(R.id.buttonG3L2);
+    	buttonG3L2.setOnClickListener(this);
+    	buttonG3L3 = (Button) findViewById(R.id.buttonG3L3);
+    	buttonG3L3.setOnClickListener(this);
     }
 
     
@@ -43,30 +42,29 @@ public class ChooseLevelGradeOne extends Activity implements View.OnClickListene
 
 private void ButtonClick1(int n) {
 	
-	startActivity(new Intent("com.example.helloworld.GradeOneLevelOne")); 
+	startActivity(new Intent("com.example.helloworld.GradeThreeLevelOne")); 
 	}
 
 private void ButtonClick2(int n) {
 	
-	startActivity(new Intent("com.example.helloworld.GradeOneLevelTwo")); 
+	startActivity(new Intent("com.example.helloworld.GradeThreeLevelTwo")); 
 	}
-
 private void ButtonClick3(int n) {
 	
-	startActivity(new Intent("com.example.helloworld.GradeOneLevelThree")); 
+	startActivity(new Intent("com.example.helloworld.GradeThreeLevelThree")); 
 	}
 
 @Override
 public void onClick(View v) {
 	
 	switch (v.getId()) {
-	case R.id.buttonG1L1:
+	case R.id.buttonG3L1:
 		ButtonClick1(1);
 		break;
-	case R.id.buttonG1L2:
+	case R.id.buttonG3L2:
 		ButtonClick2(2);
 		break;
-	case R.id.buttonG1L3:
+	case R.id.buttonG3L3:
 		ButtonClick3(3);
 		break;
 		}

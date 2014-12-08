@@ -2,9 +2,12 @@
 <resources>
  	
  	<string name="skriv_svar"><i>Skriv ditt svar</i></string>
+ 	<string name="test"><i>TEST</i></string>
  	<string name="svar">Svar!</string>
+ 	<string name="neste">Neste</string>
  	<string name="resultat">Svaret er:</string>
-    <string name="app_name">MatteGeni2</string>
+ 	<string name="ditt_svar">Du svarte:</string>
+    <string name="app_name">MatteGeni</string>
     <string name="first_welcome">Velkommen!</string>
     <string name="choose_grade">Velg klassetrinn:</string>
     <string name="choose_level">Velg nivå:</string>

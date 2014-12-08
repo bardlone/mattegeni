@@ -10,7 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin" 
-    tools:context="com.example.helloworld.ChooseLevelGradeOne" >
+    tools:context="com.example.helloworld.ChooseLevelGradeThree" >
    
     
     <TextView
@@ -23,7 +23,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"/>
         
         <Button
-            android:id="@+id/buttonG1L1"
+            android:id="@+id/buttonG3L1"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView1"
@@ -33,22 +33,22 @@
             android:text="@string/level_one" />
 
         <Button
-            android:id="@+id/buttonG1L3"
+            android:id="@+id/buttonG3L3"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/buttonG1L1"
-            android:layout_below="@+id/buttonG1L1"
+            android:layout_alignLeft="@+id/buttonG3L1"
+            android:layout_below="@+id/buttonG3L1"
             android:layout_marginTop="124dp"
             android:background="#610075"
             android:textColor="#DBF7FF"
             android:text="@string/level_three" />
 
         <Button
-            android:id="@+id/buttonG1L2"
+            android:id="@+id/buttonG3L2"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/buttonG1L1"
-            android:layout_below="@+id/buttonG1L1"
+            android:layout_alignLeft="@+id/buttonG3L1"
+            android:layout_below="@+id/buttonG3L1"
             android:layout_marginTop="36dp"
             android:background="#BB26CE"
             android:text="@string/level_two" />

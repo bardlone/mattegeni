@@ -79,7 +79,34 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-		
+	<activity
+            android:name=".ChooseLevelGradeFive"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.helloworld.ChooseLevelGradeFive" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+<activity
+            android:name=".ChooseLevelGradeSix"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.helloworld.ChooseLevelGradeSix" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+	<activity
+            android:name=".ChooseLevelGradeSeven"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.helloworld.ChooseLevelGradeSeven" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+	
         <activity
             android:name=".GradeOneLevelOne"
             android:label="@string/app_name" >
@@ -173,6 +200,78 @@
             android:label="@string/app_name" >
             <intent-filter>
             <action android:name="com.example.helloworld.GradeFourLevelThree" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+      <activity
+            android:name=".GradeFiveLevelOne"
+            android:label="@string/app_name" >
+            <intent-filter>
+            <action android:name="com.example.helloworld.GradeFiveLevelOne" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GradeFiveLevelTwo"
+            android:label="@string/app_name" >
+            <intent-filter>
+            <action android:name="com.example.helloworld.GradeFiveLevelTwo" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GradeFiveLevelThree"
+            android:label="@string/app_name" >
+            <intent-filter>
+            <action android:name="com.example.helloworld.GradeFiveLevelThree" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+      <activity
+            android:name=".GradeSixLevelOne"
+            android:label="@string/app_name" >
+            <intent-filter>
+            <action android:name="com.example.helloworld.GradeSixLevelOne" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GradeSixLevelTwo"
+            android:label="@string/app_name" >
+            <intent-filter>
+            <action android:name="com.example.helloworld.GradeSixLevelTwo" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GradeSixLevelThree"
+            android:label="@string/app_name" >
+            <intent-filter>
+            <action android:name="com.example.helloworld.GradeSixLevelThree" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+      <activity
+            android:name=".GradeSevenLevelOne"
+            android:label="@string/app_name" >
+            <intent-filter>
+            <action android:name="com.example.helloworld.GradeSevenLevelOne" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GradeSevenLevelTwo"
+            android:label="@string/app_name" >
+            <intent-filter>
+            <action android:name="com.example.helloworld.GradeSevenLevelTwo" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GradeSevenLevelThree"
+            android:label="@string/app_name" >
+            <intent-filter>
+            <action android:name="com.example.helloworld.GradeSevenLevelThree" />
             <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

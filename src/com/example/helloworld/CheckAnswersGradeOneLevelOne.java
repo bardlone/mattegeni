@@ -13,9 +13,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class CheckAnswersGradeOneLevelOne extends Activity implements View.OnClickListener {
-	TextView mTextView; 
+	TextView mTextView;
+	TextView aTextView;
+	//TextView sTextView; 
 	Button buttonneste; 
- 
+	GradeOneLevelOne myclass = new GradeOneLevelOne();
+	int answer = myclass.setAnswer();
+	int score; 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -23,9 +27,19 @@ public class CheckAnswersGradeOneLevelOne extends Activity implements View.OnCli
 		setContentView(R.layout.grade_one_answers);
 		buttonneste = (Button) findViewById(R.id.buttonneste);
 	 	buttonneste.setOnClickListener(this);
+	 	final TextView aTextView = (TextView) findViewById(R.id.mytw_two);
+	 	aTextView.setText(" " +answer);
 	 	
-		mTextView = (TextView)findViewById(R.id.textView2);
-         mTextView.setText(getIntent().getStringExtra("mytext"));  
+	 	mTextView = (TextView)findViewById(R.id.textView2);
+        mTextView.setText(getIntent().getStringExtra("mytext")); 
+        /*int y = Integer.parseInt("mytext");
+        if (y == answer) {
+        	score++;
+        }
+        final TextView sTextView = (TextView) findViewById(R.id.score);
+	 	sTextView.setText("Score:" +score);
+	 	*/
+       
 	}
 	
 	

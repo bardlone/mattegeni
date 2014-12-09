@@ -10,9 +10,9 @@ import android.widget.Button;
  
 public class ChooseLevelGradeSeven extends Activity implements View.OnClickListener{			//ENDRE HER
  
-	Button buttonG3L1;			//ENDRE HER
-	Button buttonG3L2;			//ENDRE HER
-	Button buttonG3L3;			//ENDRE HER
+	Button buttonG7L1;			
+	Button buttonG7L2;			
+	Button buttonG7L3;			
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {

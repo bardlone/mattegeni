@@ -12,9 +12,11 @@
     <string name="choose_grade">Velg klassetrinn:</string>
     <string name="choose_level">Velg nivå:</string>
     <string name="action_settings">Settings</string>
-	<string name="solvethis">Løs denne oppgaven:</string>
+	    <string name="ccscore">Score</string>
+    	<string name="solvethis">Løs denne oppgaven:</string>
     <color name="blue">#38C0FB</color>
 	<string name="mytw">MyTWtest</string>
+	<string name="mytw_two">MyTWtest2</string>
     <string name="first_grade">1.Klasse</string>
     <string name="second_grade">2.Klasse</string>
     <string name="third_grade">3.Klasse</string>

@@ -11,7 +11,7 @@ public class GradeFour extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_grade_foure);			
+		setContentView(R.layout.activity_grade_four);			
 	}
 
 	@Override

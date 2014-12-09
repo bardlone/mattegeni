@@ -19,7 +19,7 @@ public class ChooseLevelGradeOne extends Activity implements View.OnClickListene
     
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_level_grade_one);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+//        getActionBar().setDisplayHomeAsUpEnabled(true);
         buttonG1L1 = (Button) findViewById(R.id.buttonG1L1);
     	buttonG1L1.setOnClickListener(this);
     	buttonG1L2 = (Button) findViewById(R.id.buttonG1L2);

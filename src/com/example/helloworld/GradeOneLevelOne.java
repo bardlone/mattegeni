@@ -5,22 +5,25 @@ import java.util.Random;
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.TextView.OnEditorActionListener;
-
-import java.lang.System.*;
 
 public class GradeOneLevelOne extends ActionBarActivity implements View.OnClickListener {
 
 Button buttonsvar; 
+public int answer;
+Random randomGen = new Random();
+int maxValue = 4;
+int minValue = 1;
 
+public int a = randomGen.nextInt(maxValue + minValue) + minValue;
+public int b = randomGen.nextInt(maxValue + minValue) + minValue;
+public int operator = (int)(Math.random()*2) + 1;
+ 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -28,30 +31,48 @@ Button buttonsvar;
 		setContentView(R.layout.activity_grade_one);
 	    buttonsvar = (Button) findViewById(R.id.buttonsvar);
     	buttonsvar.setOnClickListener(this);
-    
-		Random randomGen = new Random();
-		int maxValue = 4;
-		int minValue = 1;
-		int a = randomGen.nextInt(maxValue + minValue) + minValue;
-		int b = randomGen.nextInt(maxValue + minValue) + minValue;
-		int operator = (int)(Math.random()*2) + 1;
 		final TextView mTextView = (TextView) findViewById(R.id.mytw);
-		//mTextView.setText( +a +operator  +b +" ="); 
 		
-		if (operator == 1)
-
-			 mTextView.setText(+a +"+" +b +"="); 
-		
-			 if ((operator == 2) && (a>b)) 
-
+		if (operator == 1){
+			mTextView.setText(+a +"+" +b +"=");
+			answer = a+b; 
+			  
+		}
+		if ((operator == 2) && (a>b)) { 
 			mTextView.setText(+a +"-" +b +"=");
-			 
-			 else if ((operator == 2) && (a<b))
-			mTextView.setText(+b +"-" +a +"=");
-			 
+			 answer = (a-b);
 			
+			 }
+			 else if ((operator == 2) && (a<b)) {
+				 mTextView.setText(+b +"-" +a +"=");
+			 answer = (b-a); 
+			
+			 }
+	    	
+			  	 	
 	}
 	
+	public int setAnswer() {
+		if (operator == 1){
+	
+			answer = a+b; 
+	
+		}
+		if ((operator == 2) && (a>b)) { 
+	
+			 answer = (a-b); 
+	
+			 }
+			 else if ((operator == 2) && (a<b)) {
+	
+			 answer = (b-a); 
+		
+			 }
+		return answer;
+				
+	}
+
+
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -84,6 +105,8 @@ Button buttonsvar;
 
              Intent myIntent = new Intent(view.getContext(),CheckAnswersGradeOneLevelOne.class);
              myIntent.putExtra("mytext",text);
+                    
+            
              startActivity(myIntent);
 	}
 	

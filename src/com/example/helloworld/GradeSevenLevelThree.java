@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 
 
-public class GradeSevenLevelTwo extends ActionBarActivity implements View.OnClickListener { 			
+public class GradeSevenLevelThree extends ActionBarActivity implements View.OnClickListener { 			
 Button buttonsvar; 
 double answer;
 

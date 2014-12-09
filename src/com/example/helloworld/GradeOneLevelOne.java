@@ -1,3 +1,4 @@
+// GradeOneLevelOne.java
 package com.example.helloworld;
 
 import java.util.Random;
@@ -14,11 +15,18 @@ import android.widget.TextView;
 
 public class GradeOneLevelOne extends ActionBarActivity implements View.OnClickListener {
 
+// The variables needed to generate the
+// tasks for the users to solve.
+ 
 Button buttonsvar; 
 public int answer;
 Random randomGen = new Random();
 int maxValue = 4;
 int minValue = 1;
+
+// Generating the numbers needed for the different tasks
+// and generating what operator the random task will have.
+ 
 
 public int a = randomGen.nextInt(maxValue + minValue) + minValue;
 public int b = randomGen.nextInt(maxValue + minValue) + minValue;
@@ -33,21 +41,25 @@ public int operator = (int)(Math.random()*2) + 1;
     	buttonsvar.setOnClickListener(this);
 		final TextView mTextView = (TextView) findViewById(R.id.mytw);
 		
+		// Giving the user the task, depending on what
+		// random operator that gets picked,
+		// for the lower grades there will be no solutions with negative numbers,
+		// so there is a check for that implemented.
+		
 		if (operator == 1){
 			mTextView.setText(+a +"+" +b +"=");
-			answer = a+b; 
-			  
+			answer = a+b; 	  
 		}
-		if ((operator == 2) && (a>b)) { 
+		
+		else if ((operator == 2) && (a>b)) { 
 			mTextView.setText(+a +"-" +b +"=");
-			 answer = (a-b);
-			
-			 }
-			 else if ((operator == 2) && (a<b)) {
-				 mTextView.setText(+b +"-" +a +"=");
+			answer = (a-b);
+		}
+		
+		else if ((operator == 2) && (a<b)) {
+			 mTextView.setText(+b +"-" +a +"=");
 			 answer = (b-a); 
-			
-			 }
+		}
 	    	
 			  	 	
 	}
@@ -98,8 +110,10 @@ public int operator = (int)(Math.random()*2) + 1;
 	
 
 	@Override
+	
 	public void onClick(View view) {
-		
+		// Function to send the answer written by the user to the 
+		// CheckAnswer class for that grade and level.
 		EditText editText = (EditText)findViewById(R.id.skrivsvar);
         String text = editText.getText().toString();
 

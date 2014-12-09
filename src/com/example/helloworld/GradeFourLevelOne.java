@@ -1,3 +1,4 @@
+// GradeFourLevelOne.java
 package com.example.helloworld;
 
 import java.util.Random;
@@ -28,6 +29,8 @@ int answer;
     
 		Random randomGen = new Random();
 		
+		// The variables needed to generate the
+		// tasks for the users to solve.
 		int maxValue = 333;
 		int minValue = 100;
 		int maxValue2 = 33;
@@ -35,6 +38,8 @@ int answer;
 		int maxValue3 = 3; 
 		int minValue3 = 1;
 		
+		// Generating the numbers needed for the different tasks
+		// and generating what operator the random task will have.
 		int a = randomGen.nextInt(maxValue  - minValue)  + minValue;
 		int b = randomGen.nextInt(maxValue  - minValue)  + minValue;
 		int c = randomGen.nextInt(maxValue2 - minValue2) + minValue2;
@@ -45,6 +50,10 @@ int answer;
 		final TextView mTextView = (TextView) findViewById(R.id.mytw);
 		//mTextView.setText( +a +operator  +b +" ="); 
 		
+		// Giving the user the task, depending on what
+		// random operator that gets picked,
+		// for the lower grades there will be no solutions with negative numbers,
+		// so there is a check for that implemented.
 		if (operator == 1) {
 			mTextView.setText(+a +"+" +b +"=");
 			answer = a+b;
@@ -93,7 +102,8 @@ int answer;
 	
 	@Override
 	public void onClick(View view) {
-		
+		// Function to send the answer written by the user to the 
+		// CheckAnswer class for that grade and level.
 		EditText editText = (EditText)findViewById(R.id.skrivsvar);
         String text = editText.getText().toString();
 

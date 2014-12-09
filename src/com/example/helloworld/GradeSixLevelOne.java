@@ -1,3 +1,4 @@
+// GradeSixLevelOne.java
 package com.example.helloworld;
 
 import java.math.BigDecimal;
@@ -30,6 +31,8 @@ double answer;
     
 		Random randomGen = new Random();
 		
+		// The variables needed to generate the
+		// tasks for the users to solve.
 		int maxValue  = 3333;
 		int maxValue2 = 3333;
 		int minValue2 = 1000;
@@ -37,6 +40,8 @@ double answer;
 		int minValue3 = 10;
 		int numOfDecimals = 3;
 		
+		// Generating the numbers needed for the different tasks
+		// and generating what operator the random task will have.
 		double a = randomGen.nextInt(maxValue) / 1000;
 		double b = randomGen.nextInt(maxValue) / 1000;
 		double c = randomGen.nextInt(maxValue) / 1000;
@@ -48,6 +53,10 @@ double answer;
 		final TextView mTextView = (TextView) findViewById(R.id.mytw);
 		//mTextView.setText( +a +operator  +b +" ="); 
 		
+		// Giving the user the task, depending on what
+		// random operator that gets picked,
+		// for the lower grades there will be no solutions with negative numbers,
+		// so there is a check for that implemented.
 		if (operator == 1) {
 			mTextView.setText(+a +"+" +b +"+" +c +"=");
 			answer = a+b+c;
@@ -101,7 +110,8 @@ double answer;
 	
 	@Override
 	public void onClick(View view) {
-		
+		// Function to send the answer written by the user to the 
+		// CheckAnswer class for that grade and level.
 		EditText editText = (EditText)findViewById(R.id.skrivsvar);
         String text = editText.getText().toString();
 

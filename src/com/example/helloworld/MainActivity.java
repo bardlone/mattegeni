@@ -1,10 +1,9 @@
+// MainActivity.java
 package com.example.helloworld;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -12,9 +11,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+// The main activity class, startupscreen of the app, 
+
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
-	Button button1;
+	
+	//The buttons for the different grades, grades 1-7
+	Button button1;		
 	Button button2;
 	Button button3;
 	Button button4;
@@ -72,35 +75,49 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 		return super.onOptionsItemSelected(item);
 	}
 
+	/*
+	 * The functions for each of the buttons, 
+	 * to bring the user to the correct grade
+	 */
+	
 	public void ButtonClick1(int n) {
-		
+		// Grade 1
 		startActivity(new Intent("com.example.helloworld.ChooseLevelGradeOne"));
 	}
 	
-public void ButtonClick2(int n) {
-		
+	public void ButtonClick2(int n) {
+		// Grade 2
 		startActivity(new Intent("com.example.helloworld.ChooseLevelGradeTwo"));
 	}
-public void ButtonClick3(int n) {
+	public void ButtonClick3(int n) {
+		// Grade 3
+		startActivity(new Intent("com.example.helloworld.ChooseLevelGradeThree"));
+		
+	}
+
+	public void ButtonClick4(int n) {
+		// Grade 4
+		startActivity(new Intent("com.example.helloworld.ChooseLevel"));
+		
+	}
 	
-	startActivity(new Intent("com.example.helloworld.ChooseLevelGradeThree"));
-}
-public void ButtonClick4(int n) {
+	public void ButtonClick5(int n) {
+		// Grade 5
+		startActivity(new Intent("com.example.helloworld.ChooseLevel"));
+		
+	}
 	
-	startActivity(new Intent("com.example.helloworld.ChooseLevel"));
-}
-public void ButtonClick5(int n) {
+	public void ButtonClick6(int n) {
+		// Grade 6
+		startActivity(new Intent("com.example.helloworld.ChooseLevel"));
+		
+	}
 	
-	startActivity(new Intent("com.example.helloworld.ChooseLevel"));
-}
-public void ButtonClick6(int n) {
-	
-	startActivity(new Intent("com.example.helloworld.ChooseLevel"));
-}
-public void ButtonClick7(int n) {
-	
-	startActivity(new Intent("com.example.helloworld.ChooseLevel"));
-}
+	public void ButtonClick7(int n) {
+		// Grade 7
+		startActivity(new Intent("com.example.helloworld.ChooseLevel"));
+		
+	}
 
 	@Override
 	public void onClick(View v) {

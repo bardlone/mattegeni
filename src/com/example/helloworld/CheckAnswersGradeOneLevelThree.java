@@ -1,6 +1,5 @@
+// CheckAnswersGradeOneLevelThree.java
 package com.example.helloworld;
-
-import android.support.v7.app.ActionBarActivity;
 
 import android.app.Activity;
 import android.content.Intent;

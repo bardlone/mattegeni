@@ -1,3 +1,4 @@
+// GradeThree.java
 package com.example.helloworld;
 
 import android.support.v7.app.ActionBarActivity;
@@ -8,8 +9,8 @@ import android.view.MenuItem;
 public class GradeThree extends ActionBarActivity {
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+	protected void onCreate(Bundle savedInstanceState) {	// When the user clicks the button for this grade,
+		super.onCreate(savedInstanceState);					// it brings up the layout for the level select.
 		setContentView(R.layout.activity_grade_three);
 	}
 

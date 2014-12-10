@@ -15,6 +15,20 @@ import android.widget.TextView;
 
 public class GradeTwoLevelOne extends ActionBarActivity implements View.OnClickListener {
 Button buttonsvar; 
+int operator = (int)(Math.random()*2) + 1;
+int answer;
+
+//The variables needed to generate the
+// tasks for the users to solve.
+Random randomGen = new Random();
+int maxValue = 100;
+int minValue = 10;
+
+// Generating the numbers needed for the different tasks
+// and generating what operator the random task will have.
+int a = randomGen.nextInt(maxValue - minValue) + minValue;
+int b = randomGen.nextInt((maxValue -10) - a) + minValue;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,17 +38,8 @@ Button buttonsvar;
 	    buttonsvar = (Button) findViewById(R.id.buttonsvar);
     	buttonsvar.setOnClickListener(this);
     
-    	// The variables needed to generate the
-    	// tasks for the users to solve.
-		Random randomGen = new Random();
-		int maxValue = 100;
-		int minValue = 10;
+    	
 		
-		// Generating the numbers needed for the different tasks
-		// and generating what operator the random task will have.
-		int a = randomGen.nextInt(maxValue - minValue) + minValue;
-		int b = randomGen.nextInt((maxValue -10) - a) + minValue;
-		int operator = (int)(Math.random()*2) + 1;
 		final TextView mTextView = (TextView) findViewById(R.id.mytw);
 		
 		// Giving the user the task, depending on what
@@ -50,10 +55,33 @@ Button buttonsvar;
 			mTextView.setText(+a +"-" +b +"=");
 			 
 			 if ((operator == 2) && (a<b))
-			mTextView.setText(+b +"-" +a +"=");
-	
+			mTextView.setText(+b +"-" +a +"="); 
+			 
+			 
+			 
 			 
 	}
+	
+	public int setAnswer() {
+		if (operator == 1){
+	
+			answer = a+b; 
+	
+		}
+		if ((operator == 2) && (a>b)) { 
+	
+			 answer = (a-b); 
+	
+			 }
+			 else if ((operator == 2) && (a<b)) {
+	
+			 answer = (b-a); 
+		
+			 }
+		return answer;
+				
+	}
+	
 	
 	
 

@@ -21,6 +21,30 @@ public class GradeFiveLevelTwo extends ActionBarActivity implements View.OnClick
 Button buttonsvar; 
 double answer;
 
+Random randomGen = new Random();
+
+// The variables needed to generate the
+// tasks for the users to solve.
+int maxValue  = 666;
+int maxValue2 = 66;
+int minValue2 = 10;
+int maxValue3 = 666; 
+int minValue3 = 100;
+int maxValue4 = 6;
+int minValue4 = 1;
+int numOfDecimals = 2;
+
+// Generating the numbers needed for the different tasks
+// and generating what operator the random task will have.
+double a = randomGen.nextInt(maxValue) / 100;
+double b = randomGen.nextInt(maxValue) / 100;
+int c = randomGen.nextInt(maxValue2 - minValue2) + minValue2;
+int d = randomGen.nextInt(maxValue2 - minValue2) + minValue2;
+int e = randomGen.nextInt(maxValue3 - minValue3) + minValue3;
+int f = randomGen.nextInt(maxValue4 - minValue4) + minValue4;
+
+int operator = (int)(Math.random()*4) + 1;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -29,29 +53,7 @@ double answer;
 	    buttonsvar = (Button) findViewById(R.id.buttonsvar);
     	buttonsvar.setOnClickListener(this);
     
-		Random randomGen = new Random();
-		
-		// The variables needed to generate the
-		// tasks for the users to solve.
-		int maxValue  = 666;
-		int maxValue2 = 66;
-		int minValue2 = 10;
-		int maxValue3 = 666; 
-		int minValue3 = 100;
-		int maxValue4 = 6;
-		int minValue4 = 1;
-		int numOfDecimals = 2;
-		
-		// Generating the numbers needed for the different tasks
-		// and generating what operator the random task will have.
-		double a = randomGen.nextInt(maxValue) / 100;
-		double b = randomGen.nextInt(maxValue) / 100;
-		int c = randomGen.nextInt(maxValue2 - minValue2) + minValue2;
-		int d = randomGen.nextInt(maxValue2 - minValue2) + minValue2;
-		int e = randomGen.nextInt(maxValue3 - minValue3) + minValue3;
-		int f = randomGen.nextInt(maxValue4 - minValue4) + minValue4;
-		
-		int operator = (int)(Math.random()*4) + 1;
+
 		
 		final TextView mTextView = (TextView) findViewById(R.id.mytw);
 		//mTextView.setText( +a +operator  +b +" ="); 
@@ -62,28 +64,43 @@ double answer;
 		// so there is a check for that implemented.
 		if (operator == 1) {
 			mTextView.setText(+a +"+" +b +"=");
-			answer = a+b;
 		}
 		
 		else if (operator == 2) {
 			mTextView.setText(+a +"-" +b +"=");
-			answer = a-b;
 		}
 			 
 
 		else if (operator == 3) {
 			mTextView.setText(+c +"*" +d +"=");
-			answer = c*d;
 		}
 
 		else if (operator == 4) {
 			mTextView.setText(+e +":" +f +"=");
-			double tempAnswer = e/f;
-			answer = round(tempAnswer, numOfDecimals);
 		}
 
 	}
-
+	public double setAnswer() {
+		if (operator == 1){
+	
+			answer = a+b;
+		}
+		
+		else if ((operator == 2)) { 
+	
+			 answer = (a-b); 
+		}
+		
+		else if (operator == 3){
+			answer = c*d;
+		}
+		else if (operator == 4){
+			double tempAnswer = e/f;
+			answer = round(tempAnswer, numOfDecimals);
+		}
+		return answer;
+	}
+	
 	public static double round(double value, int places) {
 		BigDecimal bd = new BigDecimal(value);
 		bd = bd.setScale(places, RoundingMode.HALF_UP);

@@ -17,7 +17,24 @@ import android.widget.TextView;
 
 public class GradeThreeLevelOne extends ActionBarActivity implements View.OnClickListener {
 Button buttonsvar; 
+int answer;
+// The variables needed to generate the
+// tasks for the users to solve.
+Random randomGen = new Random();
+int maxValue = 99;
+int minValue = 10;
+int maxValue2 = 4;
+int minValue2 = 1; 
+int maxValue3 = 20; 
 
+// Generating the numbers needed for the different tasks
+// and generating what operator the random task will have.
+int a = randomGen.nextInt(maxValue - minValue) + minValue;
+int b = randomGen.nextInt(maxValue + minValue) + minValue;
+int c = randomGen.nextInt(maxValue2 + minValue2) + minValue2;
+int d = randomGen.nextInt(maxValue3);
+ 
+int operator = (int)(Math.random()*4) + 1;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -26,24 +43,7 @@ Button buttonsvar;
 	    buttonsvar = (Button) findViewById(R.id.buttonsvar);
     	buttonsvar.setOnClickListener(this);
     
-    	// The variables needed to generate the
-    	// tasks for the users to solve.
-		Random randomGen = new Random();
-		int maxValue = 99;
-		int minValue = 10;
-		int maxValue2 = 4;
-		int minValue2 = 1; 
-		int maxValue3 = 20; 
-		
-		// Generating the numbers needed for the different tasks
-		// and generating what operator the random task will have.
-		int a = randomGen.nextInt(maxValue - minValue) + minValue;
-		int b = randomGen.nextInt(maxValue + minValue) + minValue;
-		int c = randomGen.nextInt(maxValue2 + minValue2) + minValue2;
-		int d = randomGen.nextInt(maxValue3);
-		if (d%2 == 1)
-			d++; 
-		int operator = (int)(Math.random()*4) + 1;
+
 		final TextView mTextView = (TextView) findViewById(R.id.mytw);
 		//mTextView.setText( +a +operator  +b +" ="); 
 		
@@ -67,12 +67,37 @@ Button buttonsvar;
 				 mTextView.setText(+c +"*" +c +"="); 
 
 			 if (operator == 4)
-
+				 if (d%2 == 1)
+						d++;
 				 mTextView.setText(+d +":" +"2" +"="); 
 
 	}
 
+	public int setAnswer() {
+		if (operator == 1){
 	
+			answer = a+b;
+		}
+		
+		else if ((operator == 2) && (a>b)) { 
+	
+			 answer = (a-b); 
+		}
+		
+		else if ((operator == 2) && (a<b)) {
+
+			 answer = (b-a); 
+		}
+		
+		else if (operator == 3){
+			answer = c*c;
+		}
+		else if (operator == 4){
+			answer = d/2;
+		}
+		return answer;
+				
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

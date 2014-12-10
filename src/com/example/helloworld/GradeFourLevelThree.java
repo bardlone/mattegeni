@@ -18,6 +18,25 @@ import android.widget.TextView;
 public class GradeFourLevelThree extends ActionBarActivity implements View.OnClickListener { 			
 Button buttonsvar; 
 int answer;
+Random randomGen = new Random();
+
+// The variables needed to generate the
+// tasks for the users to solve.
+int maxValue = 999;
+int minValue = 100;
+int maxValue2 = 99;
+int minValue2 = 10;
+int maxValue3 = 9; 
+int minValue3 = 1;
+
+// Generating the numbers needed for the different tasks
+// and generating what operator the random task will have.
+int a = randomGen.nextInt(maxValue  - minValue)  + minValue;
+int b = randomGen.nextInt(maxValue  - minValue)  + minValue;
+int c = randomGen.nextInt(maxValue2 - minValue2) + minValue2;
+int d = randomGen.nextInt(maxValue3 - minValue3) + minValue3;
+
+int operator = (int)(Math.random()*4) + 1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,25 +46,7 @@ int answer;
 	    buttonsvar = (Button) findViewById(R.id.buttonsvar);
     	buttonsvar.setOnClickListener(this);
     
-		Random randomGen = new Random();
-		
-		// The variables needed to generate the
-		// tasks for the users to solve.
-		int maxValue = 999;
-		int minValue = 100;
-		int maxValue2 = 99;
-		int minValue2 = 10;
-		int maxValue3 = 9; 
-		int minValue3 = 1;
-		
-		// Generating the numbers needed for the different tasks
-		// and generating what operator the random task will have.
-		int a = randomGen.nextInt(maxValue  - minValue)  + minValue;
-		int b = randomGen.nextInt(maxValue  - minValue)  + minValue;
-		int c = randomGen.nextInt(maxValue2 - minValue2) + minValue2;
-		int d = randomGen.nextInt(maxValue3 - minValue3) + minValue3;
-		
-		int operator = (int)(Math.random()*4) + 1;
+
 		
 		final TextView mTextView = (TextView) findViewById(R.id.mytw);
 		//mTextView.setText( +a +operator  +b +" ="); 
@@ -56,28 +57,43 @@ int answer;
 		// so there is a check for that implemented.
 		if (operator == 1) {
 			mTextView.setText(+a +"+" +b +"=");
-			answer = a+b;
 		}
 		
 		else if (operator == 2) {
 			mTextView.setText(+a +"-" +b +"=");
-			answer = a-b;
 		}
 			 
 
 		else if (operator == 3) {
 			mTextView.setText(+c +"*" +d +"=");
-			answer = c*d;
 		}
 
 		else if (operator == 4) {
 			mTextView.setText(+c +":" +d +"=");
-			answer = c/d;
 		}
 
 	}
 
+	public int setAnswer() {
+		if (operator == 1){
 	
+			answer = a+b;
+		}
+		
+		else if ((operator == 2)) { 
+	
+			 answer = (a-b); 
+		}
+		
+		else if (operator == 3){
+			answer = c*d;
+		}
+		else if (operator == 4){
+			answer = c/d;
+		}
+		return answer;
+				
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

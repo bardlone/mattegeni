@@ -21,6 +21,22 @@ public class GradeSevenLevelThree extends ActionBarActivity implements View.OnCl
 Button buttonsvar; 
 double answer;
 
+Random randomGen = new Random();
+
+// The variables needed to generate the
+// tasks for the users to solve.
+int maxValue  = 9999;
+int maxValue2 = 9;
+int minValue2 = 1;
+int numOfDecimals = 3;
+
+// Generating the numbers needed for the different tasks
+// and generating what operator the random task will have.
+double a = randomGen.nextInt(maxValue) / 1000;
+int b = randomGen.nextInt(maxValue2 - minValue2) + minValue2;
+
+int operator = (int)(Math.random()*2) + 1;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -28,22 +44,6 @@ double answer;
 		setContentView(R.layout.activity_grade_seven); 
 	    buttonsvar = (Button) findViewById(R.id.buttonsvar);
     	buttonsvar.setOnClickListener(this);
-    
-		Random randomGen = new Random();
-		
-		// The variables needed to generate the
-		// tasks for the users to solve.
-		int maxValue  = 9999;
-		int maxValue2 = 9;
-		int minValue2 = 1;
-		int numOfDecimals = 3;
-		
-		// Generating the numbers needed for the different tasks
-		// and generating what operator the random task will have.
-		double a = randomGen.nextInt(maxValue) / 1000;
-		int b = randomGen.nextInt(maxValue2 - minValue2) + minValue2;
-		
-		int operator = (int)(Math.random()*2) + 1;
 		
 		final TextView mTextView = (TextView) findViewById(R.id.mytw);
 		//mTextView.setText( +a +operator  +b +" ="); 
@@ -64,6 +64,19 @@ double answer;
 			answer = round(tempAnswer, numOfDecimals);
 		}
 
+	}
+	
+	public double setAnswer() {
+		if (operator == 1){
+	
+			answer = a*b;
+		}
+		
+		else if ((operator == 2)) { 
+	
+			 answer = (a/b); 
+		}
+		return answer;
 	}
 
 	public static double round(double value, int places) {

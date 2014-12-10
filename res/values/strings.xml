@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
- 	
+ 
  	<string name="skriv_svar"><i>Skriv ditt svar</i></string>
  	<string name="test"><i>TEST</i></string>
  	<string name="svar">Svar!</string>

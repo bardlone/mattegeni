@@ -3,10 +3,12 @@ package com.example.helloworld;
  
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
  
 public class ChooseLevelGradeTwo extends Activity implements View.OnClickListener{
  
@@ -16,16 +18,27 @@ public class ChooseLevelGradeTwo extends Activity implements View.OnClickListene
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-    
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_level_grade_two);
-        buttonG2L1 = (Button) findViewById(R.id.buttonG2L1);
+    	buttonG2L1 = (Button) findViewById(R.id.buttonG2L1);
     	buttonG2L1.setOnClickListener(this);
+    	Typeface fontb1g2 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	buttonG2L1.setTypeface(fontb1g2);
     	buttonG2L2 = (Button) findViewById(R.id.buttonG2L2);
     	buttonG2L2.setOnClickListener(this);
+    	Typeface fontb2g2 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	buttonG2L2.setTypeface(fontb2g2);
+    	
     	buttonG2L3 = (Button) findViewById(R.id.buttonG2L3);
     	buttonG2L3.setOnClickListener(this);
-    }
+    	Typeface fontb3g2 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	buttonG2L3.setTypeface(fontb3g2);
+    	
+    	TextView txt2 = (TextView) findViewById(R.id.textView1);
+    	Typeface font = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	txt2.setTypeface(font);
+    	    }
 
     
 	@Override

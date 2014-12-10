@@ -5,6 +5,7 @@ import java.util.Random;
 
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,6 +24,13 @@ Button buttonsvar;
 		setContentView(R.layout.activity_grade_one);
 	    buttonsvar = (Button) findViewById(R.id.buttonsvar);
     	buttonsvar.setOnClickListener(this);
+    	Typeface fontsvar1 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	buttonsvar.setTypeface(fontsvar1);
+    	
+    	TextView txt = (TextView) findViewById(R.id.textView5);
+    	Typeface font = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	txt.setTypeface(font);
+    	
     
     	// The variables needed to generate the
     	// tasks for the users to solve.

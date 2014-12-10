@@ -3,10 +3,12 @@ package com.example.helloworld;
  
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
  
 public class ChooseLevelGradeFive extends Activity implements View.OnClickListener{			
  
@@ -19,12 +21,24 @@ public class ChooseLevelGradeFive extends Activity implements View.OnClickListen
     
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_level_grade_five);			
-        buttonG5L1 = (Button) findViewById(R.id.buttonG5L1);			
-    	buttonG5L1.setOnClickListener(this);			
-    	buttonG5L2 = (Button) findViewById(R.id.buttonG5L2);			
-    	buttonG5L2.setOnClickListener(this);			
-    	buttonG5L3 = (Button) findViewById(R.id.buttonG5L3);			
-    	buttonG5L3.setOnClickListener(this);			
+        buttonG5L1 = (Button) findViewById(R.id.buttonG5L1);
+    	buttonG5L1.setOnClickListener(this);
+    	Typeface fontb1g5 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	buttonG5L1.setTypeface(fontb1g5);
+    	buttonG5L2 = (Button) findViewById(R.id.buttonG5L2);
+    	buttonG5L2.setOnClickListener(this);
+    	Typeface fontb2g5 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	buttonG5L2.setTypeface(fontb2g5);
+    	
+    	buttonG5L3 = (Button) findViewById(R.id.buttonG5L3);
+    	buttonG5L3.setOnClickListener(this);
+    	Typeface fontb3g5 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	buttonG5L3.setTypeface(fontb3g5);
+    	
+    	TextView txt = (TextView) findViewById(R.id.textView5);
+    	Typeface font = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	txt.setTypeface(font);
+    				
     }
 
     

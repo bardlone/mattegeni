@@ -3,10 +3,12 @@ package com.example.helloworld;
  
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
  
 public class ChooseLevelGradeOne extends Activity implements View.OnClickListener{
  
@@ -19,13 +21,25 @@ public class ChooseLevelGradeOne extends Activity implements View.OnClickListene
     
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_level_grade_one);
-//        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         buttonG1L1 = (Button) findViewById(R.id.buttonG1L1);
     	buttonG1L1.setOnClickListener(this);
+    	Typeface fontb1 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	buttonG1L1.setTypeface(fontb1);
     	buttonG1L2 = (Button) findViewById(R.id.buttonG1L2);
     	buttonG1L2.setOnClickListener(this);
+    	Typeface fontb2 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	buttonG1L2.setTypeface(fontb2);
+    	
     	buttonG1L3 = (Button) findViewById(R.id.buttonG1L3);
     	buttonG1L3.setOnClickListener(this);
+    	Typeface fontb3 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	buttonG1L3.setTypeface(fontb3);
+    	
+    	TextView txt = (TextView) findViewById(R.id.textView1);
+    	Typeface font = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+    	txt.setTypeface(font);
+    	
     }
 
     

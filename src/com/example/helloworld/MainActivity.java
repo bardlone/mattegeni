@@ -3,6 +3,7 @@ package com.example.helloworld;
 
 
 import android.content.Intent;
+import android.graphics.Typeface;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -11,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 // The main activity class, startupscreen of the app, 
 
@@ -28,23 +30,43 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 	public static double answertest;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 	button1 = (Button) findViewById(R.id.button1);
 	button1.setOnClickListener(this);
+	Typeface fontb1 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+	button1.setTypeface(fontb1);
 	button2 = (Button) findViewById(R.id.button2);
 	button2.setOnClickListener(this);
+	Typeface fontb2 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+	button2.setTypeface(fontb2);
 	button3 = (Button) findViewById(R.id.button3);
 	button3.setOnClickListener(this);
+	Typeface fontb3 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+	button3.setTypeface(fontb3);
 	button4 = (Button) findViewById(R.id.button4);
 	button4.setOnClickListener(this);
+	Typeface fontb4 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+	button4.setTypeface(fontb4);
 	button5 = (Button) findViewById(R.id.button5);
 	button5.setOnClickListener(this);
+	Typeface fontb5 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+	button5.setTypeface(fontb5);
 	button6 = (Button) findViewById(R.id.button6);
 	button6.setOnClickListener(this);
+	Typeface fontb6 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+	button6.setTypeface(fontb6);
 	button7 = (Button) findViewById(R.id.button7);
 	button7.setOnClickListener(this);
-	
+	Typeface fontb7 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+	button7.setTypeface(fontb7);
+	TextView txt = (TextView) findViewById(R.id.textView1);
+	Typeface font = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+	txt.setTypeface(font);
+	TextView txt2 = (TextView) findViewById(R.id.textView2);
+	Typeface font2 = Typeface.createFromAsset(getAssets(), "ARCHRISTY.ttf");
+	txt2.setTypeface(font2);
 	}
 
 	@Override

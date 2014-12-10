@@ -29,8 +29,6 @@ Button buttonsvar;
 		Random randomGen = new Random();
 		int maxValue = 8;
 		int minValue = 1;
-		int maxValue2 = 10; 
-		int minValue2 = 0; 
 		
 		// Generating the numbers needed for the different tasks
 		// and generating what operator the random task will have.

@@ -3,6 +3,7 @@ package com.example.helloworld;
 
 
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -24,7 +25,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 	Button button5;
 	Button button6;
 	Button button7; 
-	
+	public static double answertest;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -53,23 +54,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 		MenuInflater inflater = getMenuInflater();
 	    inflater.inflate(R.menu.main, menu);
 	    return true;
-	/*	getMenuInflater().inflate(R.menu.main, menu);
 		
-		return super.onCreateOptionsMenu(menu);*/
+	    /*MenuInflater inflater1 = getMenuInflater();
+	    inflater1.inflate(R.menu.main, menu);
+	    return super.onCreateOptionsMenu(menu);*/
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
 		
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
-		}
-		if (id == R.id.ccscore){
-			return true; 
 		}
 		
 		return super.onOptionsItemSelected(item);
@@ -146,6 +142,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 			break;
 		}
 	}
+
 	
 	
 }
